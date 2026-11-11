@@ -662,7 +662,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
       </div>
     </div>
 
-    <form id="inq-form" novalidate>
+    <form id="inq-form" novalidate><input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="f full">
         <span class="legend">Формат сотрудничества</span>
         <div class="types">
@@ -711,7 +711,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
         <small>Затем отправьте его в WhatsApp одним нажатием или скопируйте в письмо. Мы обрабатываем ваши данные согласно <a href="/privacy.html">политике конфиденциальности</a> (на английском).</small>
       </div>
       <div class="result" id="result" hidden>
-        <strong>Запрос готов, но ещё не отправлен. Отправьте его в WhatsApp ниже или скопируйте на info@tianqijewelry.com.</strong>
+        <strong id="result-msg">Запрос готов, но ещё не отправлен. Отправьте его в WhatsApp ниже или скопируйте на info@tianqijewelry.com.</strong>
         <pre id="result-text"></pre>
         <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn sm" id="wa-send" href="https://wa.me/85251659258" target="_blank" rel="noopener">Отправить в WhatsApp</a><button class="btn ghost sm" type="button" id="copy-result">Скопировать запрос</button></div>
       </div>
@@ -760,6 +760,15 @@ window.I18N={"copied": "Скопировано", "errName": "Укажите им
   }
   document.querySelectorAll('.copy[data-copy]').forEach(function(b){b.addEventListener('click',function(){var el=document.getElementById(b.dataset.copy);copyText(el.textContent.trim(),b,el)})});
   var form=document.getElementById('inq-form');
+  function sendInquiry(){
+    try{
+      var t=form.querySelector('input[name=type]:checked').value;
+      var hp=form.querySelector('input[name=website]');
+      var payload={type:types[t],name:val('f-name'),company:val('f-company'),email:val('f-email'),country:val('f-country'),pearl:val('f-pearl'),qty:val('f-qty'),message:val('f-msg'),lang:document.documentElement.lang,page:location.pathname,website:hp?hp.value:''};
+      fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+        .then(function(r){return r.json()}).then(function(j){if(j&&j.ok){var m=document.getElementById('result-msg');if(m){m.textContent="✓ Ваш запрос отправлен на info@tianqijewelry.com. Мы ответим в течение двух рабочих дней. Копия ниже; для более быстрого ответа можно также отправить её в WhatsApp.";}}}).catch(function(){});
+    }catch(e){}
+  }
   var types={wholesale:'Wholesale',oem:'OEM / ODM',dropship:'Dropshipping',sea:'Overseas partnership'};
   function val(id){return document.getElementById(id).value.trim()}
   function build(){
@@ -774,7 +783,7 @@ window.I18N={"copied": "Скопировано", "errName": "Укажите им
     e.preventDefault();var ok=true;var e1=document.getElementById('e-name'),e2=document.getElementById('e-email');e1.hidden=e2.hidden=true;
     if(!val('f-name')){e1.textContent=T.errName;e1.hidden=false;ok=false}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('f-email'))){e2.textContent=T.errEmail;e2.hidden=false;ok=false}
-    if(ok){build();document.getElementById('result').scrollIntoView({block:'nearest',behavior:'smooth'})}
+    if(ok){build();sendInquiry();document.getElementById('result').scrollIntoView({block:'nearest',behavior:'smooth'})}
   });
   var cr=document.getElementById('copy-result');cr.addEventListener('click',function(){var el=document.getElementById('result-text');copyText(el.textContent,cr,el)});
   document.addEventListener('click',function(e){var d=document.querySelector('.langs');if(d&&d.open&&!d.contains(e.target))d.open=false});
