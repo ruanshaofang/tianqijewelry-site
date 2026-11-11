@@ -463,7 +463,7 @@ function sync(){
   document.getElementById('ib-n').textContent=T.list+' ('+list.length+')';
   var m=msg(list);
   document.getElementById('ib-wa').href='https://wa.me/85251659258?text='+encodeURIComponent(m);
-  document.getElementById('ib-mail').href='mailto:tianqijewelry@163.com?subject='+encodeURIComponent('Quote request — '+list.length+' items')+'&body='+encodeURIComponent(m);
+  document.getElementById('ib-mail').href='mailto:info@tianqijewelry.com?subject='+encodeURIComponent('Quote request — '+list.length+' items')+'&body='+encodeURIComponent(m);
 }
 grid.addEventListener('click',function(e){
   var a=e.target.closest('.add'); if(a){toggle(a.dataset.c);return}
