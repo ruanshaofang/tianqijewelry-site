@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tianqijewelry.com/sitemap.xml
