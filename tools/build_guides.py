@@ -311,6 +311,101 @@ GUIDES.append(dict(
     published="2026-11-13", faq=G2_FAQ, main=G2_MAIN))
 
 
+# ---- 3. Freshwater vs saltwater ----
+G3_FAQ = [
+    ("Which is better, freshwater or Akoya pearls?",
+     "Neither is better for every product. Akoya pearls are the classic round, sharp-lustre pearl for strands and studs. Freshwater pearls give more shapes, colours and sizes for the money and suit volume and fashion lines. Choose by your customer, design and price point."),
+    ("Are freshwater pearls real pearls?",
+     "Yes. Freshwater pearls are real cultured pearls, grown in mussels. In US advertising they should be described as cultured pearls, for example 'cultured freshwater pearls', because the unqualified word 'pearl' is reserved for natural pearls."),
+    ("Can I tell freshwater from Akoya by looking?",
+     "Not reliably, especially with today's round freshwater pearls. Shape, lustre and drill-hole details give clues, but only testing confirms it. We state the pearl type and any treatment on the invoice, and a third-party test report is available on request."),
+    ("Are coloured pearls dyed?",
+     "Some are, some are not. Freshwater white, pink and lavender occur naturally, Tahitian pearls are naturally dark, and South Sea pearls are naturally white or gold. Bright fashion colours are usually dyed. We state any treatment on the invoice, and you should disclose it in your listings."),
+    ("Can I mix pearl types in one order?",
+     "Yes. Many buyers combine freshwater for volume lines with a few saltwater pieces for higher price points. The minimum is 5 pcs per item and USD 100 per order."),
+]
+
+G3_MAIN = f"""  <article class="guide">
+    <span class="eyebrow">Buyer guide</span>
+    <h1>Freshwater or saltwater pearls? How to choose for your jewelry line</h1>
+    <p class="meta">Tianqi Jewelry · Shanxiahu, Zhuji · Updated 13 November 2026</p>
+    <p class="lead">Freshwater, Akoya, Tahitian and South Sea pearls are all cultured pearls, but they differ in size, colour, shape and price. This guide compares them side by side and shows which fits which kind of product and customer.</p>
+    <nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>
+      <li><a href="#compare">The four main types at a glance</a></li>
+      <li><a href="#freshwater">Freshwater pearls</a></li>
+      <li><a href="#saltwater">Saltwater pearls: Akoya, Tahitian, South Sea</a></li>
+      <li><a href="#choose">Which type for which product</a></li>
+      <li><a href="#colour">Natural colour and treatments</a></li>
+      <li><a href="#labelling">Describing pearls in your listings</a></li>
+      <li><a href="#faq">Questions buyers ask</a></li>
+    </ol></nav>
+
+    <h2 id="compare">The four main types at a glance</h2>
+    <div class="gscroll"><table class="gtable">
+      <thead><tr><th></th><th>Freshwater</th><th>Akoya</th><th>Tahitian</th><th>South Sea</th></tr></thead>
+      <tbody>
+        <tr><th>Grown in</th><td>Freshwater mussels</td><td>Saltwater oysters</td><td>Saltwater oysters</td><td>Saltwater oysters</td></tr>
+        <tr><th>Main origin</th><td>Zhejiang, China</td><td>Japan · China</td><td>French Polynesia</td><td>Australia · Indonesia · Philippines</td></tr>
+        <tr><th>Sizes we supply</th><td>2–12 mm</td><td>2–10 mm</td><td>8–16 mm</td><td>9–20 mm</td></tr>
+        <tr><th>Colours</th><td>White, pink, lavender</td><td>White, silver-blue, rosé</td><td>Peacock, grey, aubergine</td><td>Gold, white, champagne</td></tr>
+        <tr><th>Shapes</th><td>Round to baroque; widest range</td><td>Mostly round</td><td>Round, drop, circled, baroque</td><td>Round, drop, baroque</td></tr>
+        <tr><th>Inside</th><td>Mostly solid nacre (Edison: bead-nucleated)</td><td>Bead with nacre layer</td><td>Bead with nacre layer</td><td>Bead with thick nacre</td></tr>
+        <tr><th>Relative price</th><td>$</td><td>$$</td><td>$$$</td><td>$$$$</td></tr>
+        <tr><th>Best for</th><td>Volume and fashion lines, beading, baroque designs</td><td>Classic strands and studs</td><td>Dark statement pieces, men's jewelry</td><td>High-value and custom pieces</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Relative price compares typical lots of similar size and grade; a top freshwater lot can cost more than a low Akoya lot.</p>
+
+    <h2 id="freshwater">Freshwater pearls</h2>
+    <p><a href="/pearls/freshwater-pearls-wholesale/">Freshwater pearls</a> are cultured in mussels, mostly in Zhejiang, China. One mussel can grow many pearls at once, which is why freshwater pearls offer the most choice for the money. Most form without a bead, so they are almost entirely nacre and hold up well to everyday wear.</p>
+    <p>They come in more shapes and natural colours than any other type: round and near-round for classic styles, <a href="/pearls/baroque-pearls-wholesale/">baroque</a> and <a href="/pearls/keshi-pearls-wholesale/">keshi</a> for contemporary designs, and bead-nucleated <a href="/pearls/edison-pearls-wholesale/">Edison pearls</a> when you want a large round pearl at freshwater pricing.</p>
+
+    <h2 id="saltwater">Saltwater pearls: Akoya, Tahitian, South Sea</h2>
+    <p>Saltwater pearls grow in oysters around a bead nucleus, usually one or two pearls per oyster at a time, so supply is smaller and prices are higher.</p>
+    <ul>
+      <li><a href="/pearls/akoya-pearls-wholesale/"><strong>Akoya</strong></a>: round, with sharp lustre and pink or silver overtones. The classic choice for matched strands and studs.</li>
+      <li><a href="/pearls/tahitian-pearls-wholesale/"><strong>Tahitian</strong></a>: naturally dark, with peacock-green and aubergine overtones. Works for both men's and women's designs.</li>
+      <li><a href="/pearls/south-sea-pearls-wholesale/"><strong>South Sea</strong></a>: the largest cultured pearls, with thick nacre, in white and gold. For high-value pieces and custom work.</li>
+    </ul>
+    <p>We source saltwater pearls through Hong Kong's pearl dealers and fairs and grade them on the same <a href="/guides/pearl-grading-guide/">five factors</a> as freshwater pearls.</p>
+
+    <h2 id="choose">Which type for which product</h2>
+    <div class="gscroll"><table class="gtable">
+      <thead><tr><th>You are making…</th><th>Start with</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><th>Everyday studs and pendants at an accessible price</th><td>Freshwater, round or button</td><td>Good lustre for the price, wide size choice</td></tr>
+        <tr><th>Classic strands and bridal pieces</th><td>Akoya, or high-grade round freshwater</td><td>Round shape and close matching</td></tr>
+        <tr><th>Contemporary or handmade designs</th><td>Baroque, keshi, biwa</td><td>Every piece is different; strong lustre</td></tr>
+        <tr><th>Large round pearls on a mid budget</th><td>Edison</td><td>Large, round and bright at freshwater pricing</td></tr>
+        <tr><th>Dark or men's pieces</th><td>Tahitian</td><td>Naturally dark colours</td></tr>
+        <tr><th>High-value, one-off or custom pieces</th><td>South Sea</td><td>Size, nacre and natural gold or white colour</td></tr>
+      </tbody>
+    </table></div>
+    <p>Many brands combine types: freshwater for the core range, one or two saltwater lines for higher price points. If you are not sure, tell us the product and target retail price and we will suggest options with photos.</p>
+
+    <h2 id="colour">Natural colour and treatments</h2>
+    <p>Freshwater pearls grow naturally in white, pink and lavender; Tahitian pearls are naturally dark; South Sea pearls are naturally white or gold. Bright fashion colours, such as green or blue, are usually dyed. Treatment is not a problem in itself, but it must be disclosed.</p>
+    <p>We state the pearl type and any treatment on the invoice. Pass that information on in your own product descriptions.</p>
+
+    <h2 id="labelling">Describing pearls in your listings</h2>
+    <p>If you sell in the United States, the FTC's Jewelry Guides (16 CFR §23.20) say a cultured pearl should not be called a "pearl" unless the word is immediately preceded, with equal conspicuousness, by "cultured" or "cultivated". In practice: write "cultured freshwater pearl" or "freshwater cultured pearl", not just "pearl" or "natural pearl". Other markets have similar consumer-protection rules, so naming the type and treatment clearly is the safe default everywhere.</p>
+    <div class="lp-cta"><a class="btn" href="/#inquiry">Ask which type fits your line</a><a class="btn ghost" href="{wa('Hello Tianqi Jewelry, I am choosing between pearl types.' + chr(10) + 'Product: ' + chr(10) + 'Target retail price: ' + chr(10) + 'Quantity: ' + chr(10) + 'Destination country: ' + chr(10) + chr(10) + BASE + '/guides/freshwater-vs-saltwater-pearls/')}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+
+    <h2 id="faq">Questions buyers ask</h2>
+    {faq_html(G3_FAQ)}
+    <div class="lp-cta"><a class="btn" href="/#inquiry">Ask for a quote</a><a class="btn ghost" href="/products/">Browse the catalogue</a></div>
+  </article>"""
+
+GUIDES.append(dict(
+    slug="freshwater-vs-saltwater-pearls",
+    name="Freshwater vs saltwater",
+    h1="Freshwater or saltwater pearls? How to choose for your jewelry line",
+    title="Freshwater vs Saltwater Pearls (Akoya, Tahitian, South Sea): Buyer's Comparison | Tianqi Jewelry",
+    desc="Freshwater, Akoya, Tahitian and South Sea pearls compared: origin, sizes, colours, shapes, relative price, which suits which product, treatments and how to label cultured pearls.",
+    blurb="Freshwater, Akoya, Tahitian and South Sea compared side by side, which type fits which product, and how to describe them in listings.",
+    published="2026-11-13", faq=G3_FAQ, main=G3_MAIN))
+
+
 # ---------------------------------------------------------------- build
 def guide_ld(g):
     canon = f"{BASE}/guides/{g['slug']}/"
