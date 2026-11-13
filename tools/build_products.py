@@ -124,7 +124,7 @@ def page(lg, p):
     og_img = f"{BASE}/assets/products/{p['i'][0]}.webp"
     alts = "".join(f'<link rel="alternate" hreflang="{HL[x]}" href="{BASE}{url(x, p)}">\n' for x in LANGS)
     alts += f'<link rel="alternate" hreflang="x-default" href="{BASE}{url("en", p)}">\n'
-    hdr = re.sub(r'href="(/[a-z]{2})?/products/"', lambda m: f'href="{m.group(1) or ""}/products/{p["slug"]}/"', header)
+    hdr = re.sub(r'href="(/[a-z]{2})?/products/"(?= hreflang=)', lambda m: f'href="{m.group(1) or ""}/products/{p["slug"]}/"', header)
     wa_text = (f"Hello Tianqi Jewelry, I'd like a quote for {p['c']} · {t}.\nQuantity: \nDestination country: \n"
                f"Language: {C.get('langName', lg)}\n\n{canon}")
     wa = "https://wa.me/85251659258?text=" + esc(urllib.parse.quote(wa_text))
