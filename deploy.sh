@@ -26,3 +26,9 @@ fi
 sudo rsync -a --delete "$LIVE/" "$PREV/"
 sudo rsync -a --delete --exclude '.git' site/ "$LIVE/"
 echo "$(date '+%F %T') deployed $(git log --oneline -1)"
+
+# Restart the inquiry receiver when its code changed in this update
+if ! git diff --quiet "$LOCAL" "$REMOTE" -- inquiry/ 2>/dev/null; then
+  if sudo systemctl restart tianqi-inquiry; then echo "$(date '+%F %T') restarted tianqi-inquiry"
+  else echo "$(date '+%F %T') WARN: could not restart tianqi-inquiry"; fi
+fi

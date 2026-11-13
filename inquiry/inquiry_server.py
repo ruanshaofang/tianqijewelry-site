@@ -35,6 +35,7 @@ SMTP_PASS = os.environ.get("INQ_SMTP_PASS", "")
 FIELDS = {  # name: max length
     "type": 40, "name": 120, "company": 160, "email": 200, "country": 80,
     "pearl": 120, "qty": 200, "lang": 10, "message": 5000, "page": 300,
+    "src": 200, "landing": 300, "ref": 300,  # where the visit came from (assets/analytics.js)
 }
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 _lock = threading.Lock()
@@ -67,6 +68,7 @@ def send_mail(rec):
     labels = [("Partnership", "type"), ("Name", "name"), ("Company", "company"),
               ("Email", "email"), ("Country", "country"), ("Pearl type", "pearl"),
               ("Quantity / budget", "qty"), ("Site language", "lang"), ("Page", "page"),
+              ("Source", "src"), ("Landing page", "landing"), ("Referrer", "ref"),
               ("Received (UTC)", "received"), ("IP", "ip")]
     body = "\n".join(f"{k}: {rec.get(v) or '-'}" for k, v in labels)
     body += "\n\nDetails:\n" + (rec.get("message") or "-")
