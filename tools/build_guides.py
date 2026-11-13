@@ -43,6 +43,7 @@ CSS = """<style>
 .guide p,.guide li{line-height:1.7;color:var(--ink-2,#3b4a4f)}
 .guide p{margin:0 0 14px}.guide ul{margin:0 0 14px;padding-inline-start:22px}
 .guide .lead{font-size:1.05rem}
+.guide .note{color:var(--muted);font-size:.88rem}
 .guide .meta{color:var(--muted);font-size:.85rem;margin:0 0 18px}
 .guide .toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:18px 0}
 .guide .toc ol{margin:6px 0 0;padding-inline-start:20px}.guide .toc li{line-height:1.6}
@@ -219,6 +220,97 @@ GUIDES.append(dict(
     published="2026-11-13", faq=G1_FAQ, main=G1_MAIN))
 
 
+# ---- 2. Pearl sizes and price ----
+G2_FAQ = [
+    ("Why does a 9 mm pearl cost so much more than an 8 mm pearl?",
+     "Larger pearls need longer in the mollusc, and fewer of them grow clean and well shaped. So price rises faster than size, and the steps get steeper near the top of each pearl type's size range."),
+    ("How are non-round pearls measured?",
+     "Round and near-round pearls are measured across the diameter. Drop, oval, button and baroque pearls are usually given as length × width in millimetres."),
+    ("How many pearls are in a 16-inch strand?",
+     "Divide the length by the pearl size: about 406 mm ÷ 7 mm ≈ 58 pearls for a 7–7.5 mm strand. Knots between pearls and the clasp reduce the count slightly."),
+    ("What size should I choose for stud earrings?",
+     "It depends on your customers and price point. Many retail lines use 6–8 mm for everyday studs and go larger for statement pieces. Tell us your target price and we will suggest sizes and grades that fit."),
+    ("Do you sell by piece, by strand or by weight?",
+     "Our catalogue lists items per piece, pair or strand, with a minimum of 5 pcs per item and USD 100 per order. Prices depend on grade, size and quantity, and we quote each request with real photos."),
+]
+
+G2_ROWS = [(3, 135, 152), (4, 102, 114), (5, 81, 91), (6, 68, 76), (7, 58, 65), (8, 51, 57), (9, 45, 51), (10, 41, 46), (12, 34, 38)]
+
+G2_MAIN = f"""  <article class="guide">
+    <span class="eyebrow">Buyer guide</span>
+    <h1>Pearl sizes and price: how millimetres change what you pay</h1>
+    <p class="meta">Tianqi Jewelry · Shanxiahu, Zhuji · Updated 13 November 2026</p>
+    <p class="lead">Size is the easiest pearl factor to specify and one of the biggest drivers of price. This guide explains how pearls are measured, the size ranges of each pearl type, how many pearls go into a strand, and how to balance size against quality within a budget.</p>
+    <nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>
+      <li><a href="#measuring">How pearl size is measured</a></li>
+      <li><a href="#ranges">Size ranges by pearl type</a></li>
+      <li><a href="#price">Why price rises faster than size</a></li>
+      <li><a href="#strands">Strands: sizes, lengths and pearl counts</a></li>
+      <li><a href="#by-use">Choosing sizes by product</a></li>
+      <li><a href="#budget">Size or quality? Working to a budget</a></li>
+      <li><a href="#faq">Questions buyers ask</a></li>
+    </ol></nav>
+
+    <h2 id="measuring">How pearl size is measured</h2>
+    <p>Pearl size is the diameter in millimetres. Round and near-round pearls are measured straight across; drop, oval, button and baroque pearls are usually given as length × width.</p>
+    <p>Wholesale lots are quoted in 0.5 mm ranges, such as 7.0–7.5 mm: every pearl in the lot falls inside that range. A range of 7–8 mm is wider and cheaper to fill, but the pearls will look less even side by side. If you sell pairs or uniform strands, ask for a 0.5 mm range and put <a href="/guides/pearl-grading-guide/#matching">matching</a> in your spec.</p>
+    <p>When you check photos, ask for a caliper reading on a few pearls rather than a ruler next to the lot.</p>
+
+    <h2 id="ranges">Size ranges by pearl type</h2>
+    <div class="gscroll"><table class="gtable">
+      <thead><tr><th>Pearl type</th><th>Typical sizes we supply</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><th><a href="/pearls/freshwater-pearls-wholesale/">Freshwater</a></th><td>2–12 mm</td><td>Widest choice of shapes and colours; strong value for volume lines</td></tr>
+        <tr><th><a href="/pearls/edison-pearls-wholesale/">Edison</a></th><td>Larger round freshwater sizes</td><td>Bead-nucleated, so they grow larger and rounder than most freshwater pearls</td></tr>
+        <tr><th><a href="/pearls/akoya-pearls-wholesale/">Akoya</a></th><td>2–10 mm</td><td>The classic round strand and stud pearl</td></tr>
+        <tr><th><a href="/pearls/tahitian-pearls-wholesale/">Tahitian</a></th><td>8–16 mm</td><td>Naturally dark colours</td></tr>
+        <tr><th><a href="/pearls/south-sea-pearls-wholesale/">South Sea</a></th><td>9–20 mm</td><td>The largest cultured pearls; gold, white and champagne</td></tr>
+      </tbody>
+    </table></div>
+    <p>Each type is priced on its own scale. A 9 mm freshwater pearl and a 9 mm Akoya pearl are different products, so compare sizes within a type.</p>
+
+    <h2 id="price">Why price rises faster than size</h2>
+    <p>A larger pearl spends longer growing, and the longer it grows the more chances there are for marks and uneven shape. Fewer pearls reach the larger sizes with good lustre and a clean surface, so each extra half-millimetre costs more than the one before, and the steps get steeper near the top of each type's range.</p>
+    <p>Size also multiplies through a design. A strand of larger pearls needs fewer pearls, but each one costs more, and matching them takes a bigger pool to choose from.</p>
+
+    <h2 id="strands">Strands: sizes, lengths and pearl counts</h2>
+    <p>Strands are either uniform (all pearls in one 0.5 mm range) or graduated (larger in the centre, written end-to-centre, such as 6–9 mm). Common necklace lengths are about 16 in (40 cm, choker) and 18 in (45 cm, princess); longer matinee and opera lengths are made to order.</p>
+    <p>Approximate number of pearls per strand, before knots and clasp:</p>
+    <div class="gscroll"><table class="gtable">
+      <thead><tr><th>Pearl size</th><th>16 in / 40 cm strand</th><th>18 in / 45 cm strand</th></tr></thead>
+      <tbody>{"".join(f"<tr><th>{d} mm</th><td>about {a}</td><td>about {b}</td></tr>" for d, a, b in G2_ROWS)}</tbody>
+    </table></div>
+    <p class="note">Calculated as strand length ÷ pearl size. Hand-knotting between pearls and the clasp reduce the count a little.</p>
+
+    <h2 id="by-use">Choosing sizes by product</h2>
+    <ul>
+      <li><strong>Stud earrings</strong>: many everyday lines use 6–8 mm; smaller sizes suit minimalist or children's styles, larger ones statement pieces. Order matched pairs, half-drilled.</li>
+      <li><strong>Drop earrings and pendants</strong>: drop, button and baroque shapes are given as length × width; a single pendant pearl can go larger than a strand for the same budget.</li>
+      <li><strong>Necklaces</strong>: choose a uniform or graduated strand and a length, then count pearls with the table above.</li>
+      <li><strong>Bracelets</strong>: usually smaller than the matching necklace, so the piece sits comfortably on the wrist.</li>
+      <li><strong>Beading and DIY</strong>: small freshwater pearls (2–5 mm) and <a href="/pearls/keshi-pearls-wholesale/">keshi</a> are popular for layered and handmade designs.</li>
+    </ul>
+
+    <h2 id="budget">Size or quality? Working to a budget</h2>
+    <p>For a fixed price per piece, you usually trade size against lustre and surface. Stepping down half a millimetre often frees enough budget for noticeably better lustre, which end customers see first. For pieces sold on a "bigger is better" story, the opposite trade may sell better.</p>
+    <p>The quickest way to decide is to compare two samples side by side: the size you want at a lower grade, and half a millimetre smaller at a higher grade. Tell us your target price and quantity and we will quote both with real photos.</p>
+    <div class="lp-cta"><a class="btn" href="/#inquiry">Ask for a size and price quote</a><a class="btn ghost" href="{wa('Hello Tianqi Jewelry, I am comparing pearl sizes.' + chr(10) + 'Pearl type: ' + chr(10) + 'Product (studs / strand / pendant): ' + chr(10) + 'Size range: ' + chr(10) + 'Target price per piece: ' + chr(10) + 'Quantity: ' + chr(10) + 'Destination country: ' + chr(10) + chr(10) + BASE + '/guides/pearl-sizes-and-price/')}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+
+    <h2 id="faq">Questions buyers ask</h2>
+    {faq_html(G2_FAQ)}
+    <div class="lp-cta"><a class="btn" href="/#inquiry">Ask for a quote</a><a class="btn ghost" href="/products/">Browse the catalogue</a></div>
+  </article>"""
+
+GUIDES.append(dict(
+    slug="pearl-sizes-and-price",
+    name="Pearl sizes and price",
+    h1="Pearl sizes and price: how millimetres change what you pay",
+    title="Pearl Sizes and Price Guide: mm Ranges, Strand Counts, Choosing Sizes | Tianqi Jewelry",
+    desc="How pearl size is measured, size ranges for freshwater, Akoya, Tahitian and South Sea pearls, pearls per strand, sizes by product and how to trade size against quality on a budget.",
+    blurb="How pearls are measured, size ranges by type, how many pearls fill a strand, and how to balance size against quality on a budget.",
+    published="2026-11-13", faq=G2_FAQ, main=G2_MAIN))
+
+
 # ---------------------------------------------------------------- build
 def guide_ld(g):
     canon = f"{BASE}/guides/{g['slug']}/"
@@ -235,7 +327,16 @@ def guide_ld(g):
     ]}
 
 
+def related(g):
+    others = [o for o in GUIDES if o["slug"] != g["slug"]]
+    if not others:
+        return ""
+    return ('<h2>More buyer guides</h2><ul class="glist">' + "".join(
+        f'<li><a href="/guides/{o["slug"]}/"><strong>{esc(o["h1"])}</strong><span>{esc(o["blurb"])}</span></a></li>' for o in others) + "</ul>")
+
+
 for g in GUIDES:
+    g["main"] = g["main"].replace("  </article>", related(g) + "\n  </article>")
     out = ROOT / "guides" / g["slug"] / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     crumbs = f'<a href="/">Home</a> / <a href="/guides/">Buyer guides</a> / {esc(g["name"])}'
